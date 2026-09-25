@@ -1,5 +1,5 @@
 coins = 5
-games = 0
+games = 2
 try:
     result = coins/games
 except:
