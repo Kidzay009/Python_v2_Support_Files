@@ -5,7 +5,7 @@ class TestMain(unittest.TestCase):
     def test_location(self):
         a = 'red'
         b = 'red'
-        self.assertEqual(a,b)
+        self.assertIn(a,b)
 
     def test_truth(self):
         self.assertTrue((2 + 5) * 3 == 21)
