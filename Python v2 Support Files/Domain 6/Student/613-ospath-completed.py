@@ -1,4 +1,4 @@
-import os
+import os.path
 
 if not os.path.exists('613-message.txt'):
     message = open('613-message.txt','w')
@@ -12,4 +12,6 @@ else:
     print(content)
     message_test.close()
 
- 
+    file_path = os.path.join('613-test','613-test.txt')
+    if os.path.abspath(file_path):
+        print('File-exists.')
