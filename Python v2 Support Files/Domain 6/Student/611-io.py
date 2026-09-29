@@ -5,5 +5,5 @@ game_stream = io.StringIO()
 game_stream.write("The game has started.\n")
 game_stream.write("Here is your first question. \n")
 
-game_stream.seek(0)
+game_stream.seek(1)
 print(game_stream.read())
