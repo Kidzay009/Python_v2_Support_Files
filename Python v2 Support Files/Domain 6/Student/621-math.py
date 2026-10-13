@@ -3,7 +3,7 @@ import math
 x=3.33
 y=-12
 
-print(math.fabs(y))
+#print(math.fabs(y))
 
 #print(math.ceil(x))
 
@@ -17,7 +17,7 @@ print(math.fabs(y))
 
 #print(math.frexp(x))
 
-#print(math.isnan(x))
+print(math.isnan(x))
 
 #print(x*y)
 
