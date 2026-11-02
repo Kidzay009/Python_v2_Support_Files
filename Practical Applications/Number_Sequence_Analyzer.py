@@ -34,7 +34,10 @@ while choice_M <= 6 or choice_M >= 0:
 
 if choice_M == 0:
     choice_Fib = int(input("how many loops?"))
-
-while choice_Fib > 0: 
-    if first_Fib == 0:
-        print(first_Fib)
+    loops_Fib = choice_Fib
+    choice_Fib = 0
+    while choice_Fib < loops_Fib:
+        if loops_Fib == 1:
+            print(first_Fib)
+        choice_Fib += 1
+        elif loops
