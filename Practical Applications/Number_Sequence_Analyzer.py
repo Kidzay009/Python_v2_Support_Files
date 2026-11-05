@@ -47,3 +47,55 @@ if choice_M == 0:
 
 elif choice_M == 1:
     choice_Prim = int(input("What stupid number can you not check yourself? "))
+    prime = True
+
+    if choice_Prim == 1:
+        prime = False
+        print(prime)
+
+    elif choice_Prim == 2:
+        prime = True
+        print(prime)
+    
+    else:
+        for i in range(2,choice_Prim):
+
+            if choice_Prim % i == 0:
+                prime = False
+                break
+
+            else:
+                prime = True
+            
+        print(prime)
+
+if choice_M == 2:
+    choice_PrimRS =  int(input("Geez Choose your first number?!?!"))
+    choice_PrimRE = int(input("better not be that long.. whats the second?"))
+    choice_Range = range(choice_PrimRS,choice_PrimRE + 1)
+    range_list = []
+    prime = True
+    for i in choice_Range:
+        if i == 1:
+            prime = False
+    
+        elif i == 2:
+            prime = True
+
+        elif i < 0:
+            prime = False
+        
+        else:
+            for divisor in range(2, i):
+    
+                if i % divisor == 0:
+                    prime = False
+                    break
+    
+                else:
+                    prime = True
+
+        if prime == True:
+            range_list.append(i)
+
+print(range_list)
