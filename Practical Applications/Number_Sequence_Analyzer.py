@@ -98,4 +98,13 @@ if choice_M == 2:
         if prime == True:
             range_list.append(i)
 
-print(range_list)
+    print(range_list)
+
+if choice_M == 3:
+    choice_MT = int(input("What do you need to be multiplied idiot?"))
+    choice_MTL = int(input("How long? if it's more than 10 ill get u."))
+    MTL_list = []
+    for i in range(1,choice_MTL + 1):
+        i *= choice_MT
+        MTL_list.append(i)
+    print(MTL_list)
