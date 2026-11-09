@@ -28,6 +28,9 @@ while choice_M <= 6 or choice_M >= 0:
     elif choice_M == 5:
         print("I'm pretty sure you just made that up just now")
         break
+    elif choice_M == 6:
+        print("I dont want to talk to anyway!")
+        break
     else:
          print("THATS NOT IN THE LIST BOZO!!!")
     
@@ -108,3 +111,10 @@ if choice_M == 3:
         i *= choice_MT
         MTL_list.append(i)
     print(MTL_list)
+
+if choice_M == 4:
+    choice_Fact = int(input("What number do you need for the Tacforial?"))
+    for i in range (1, choice_Fact):
+        choice_Fact *= i
+    print(choice_Fact)
+
