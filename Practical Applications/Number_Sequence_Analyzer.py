@@ -13,33 +13,32 @@ while choice_M <= 6 or choice_M >= 0:
         choice_M = int(input("what would you like to choose ONLY ENTER KEYPAD NUMBERS? enter 0-6 "))
 
     except ValueError:
-        print("THATS NOT A NUMBER BOZO!!!")
+        print("THATS NOT A NUMBER BOZO!!!","\n")
         continue
 
     if choice_M == 0:
-        print("Let's do a Fibonacci!")
+        print("Let's do a Fibonacci!","\n")
         
     elif choice_M == 1:
-        print("You really need to know if a number is prime or not?! Fine...")
+        print("You really need to know if a number is prime or not?! Fine...","\n")
         
     elif choice_M == 2:
-        print("You really are needy aren't you? Lets see them all!")
+        print("You really are needy aren't you? Lets see them all!","\n")
         
     elif choice_M == 3:
-        print("What if I dont want to multiply?!? HUH?!?!")
+        print("What if I dont want to multiply?!? HUH?!?!","\n")
         
     elif choice_M == 4:
-        print("What even is a Tacforial?")
-
+        print("What even is a Tacforial?","\n")
         
     elif choice_M == 5:
-        print("I'm pretty sure you just made that up just now")
+        print("I'm pretty sure you just made that up just now","\n")
         
     elif choice_M == 6:
-        print("I dont want to talk to YOU anyway!")
+        print("I dont want to talk to YOU anyway!","\n")
         break
     else:
-         print("THATS NOT IN THE LIST BOZO!!!")
+         print("THATS NOT IN THE LIST BOZO!!!","\n")
 
     if choice_M == 0:
 
@@ -47,7 +46,7 @@ while choice_M <= 6 or choice_M >= 0:
             choice_Fib = int(input("how many loops? "))
 
         except ValueError:
-            print("You really like to test my patience...")
+            print("You really like to test my patience...","\n")
             continue
 
         loops_Fib = choice_Fib
@@ -55,7 +54,7 @@ while choice_M <= 6 or choice_M >= 0:
         Fib_list = []
 
         if loops_Fib < 0:
-            print("How do you expect me to print that many loops?")
+            print("How do you expect me to print that many loops?","\n")
 
         while choice_Fib < loops_Fib:
 
@@ -73,13 +72,13 @@ while choice_M <= 6 or choice_M >= 0:
             choice_Prim = int(input("What stupid number can you not check yourself? "))
 
         except ValueError:
-            print("Choose. a. NUMBER. ")
+            print("Choose. a. NUMBER. ","\n")
             continue
 
         prime = True
 
         if choice_Prim <= 0: 
-            print("im not doing that.")
+            print("im not doing that.","\n")
             continue
 
         elif choice_Prim == 1:
@@ -108,7 +107,7 @@ while choice_M <= 6 or choice_M >= 0:
             choice_PrimRE = int(input("better not be that long.. whats the second? "))
 
         except ValueError:
-            print("Are you joking with me? WHY DO YOU KEEP ENTERING WOR-")
+            print("Are you joking with me? WHY DO YOU KEEP ENTERING WOR-","\n")
             continue
 
         choice_Range = range(choice_PrimRS,choice_PrimRE + 1)
@@ -116,11 +115,11 @@ while choice_M <= 6 or choice_M >= 0:
         prime = True
 
         if choice_PrimRE < choice_PrimRS:
-            print("i h8te u...")
+            print("i h8te u...","\n")
             continue
 
         elif choice_PrimRE or choice_PrimRS < 0:
-            print("get out with your NEGATIVE energy!")
+            print("get out with your NEGATIVE energy!","\n")
             continue
 
         for i in choice_Range:
@@ -155,13 +154,13 @@ while choice_M <= 6 or choice_M >= 0:
             choice_MTL = int(input("How long? if it's more than 10 ill get u. "))
 
         except ValueError:
-            print("you know what the next time you enter a word i'm leaving...")
+            print("you know what the next time you enter a word i'm leaving...","\n")
             continue
 
         MTL_list = []
 
         if choice_MTL <= 0:
-            print("are you stupid? you CANT HAVE NEGATIVE AMOUNTS!!")
+            print("are you stupid? you CANT HAVE NEGATIVE AMOUNTS!!","\n")
             continue
 
         for i in range(1,choice_MTL + 1):
@@ -175,11 +174,11 @@ while choice_M <= 6 or choice_M >= 0:
             choice_Fact = int(input("What number do you need for the Tacforial? "))
 
         except ValueError:
-            print("Im NOT joking don't test me!")
+            print("Im NOT joking don't test me!","\n")
             continue
 
         if choice_Fact < 0:
-            print("NO NEGATIVES. I SAID NO NEGATIVES!!!")
+            print("NO NEGATIVES. I SAID NO NEGATIVES!!!","\n")
 
         for i in range (1, choice_Fact):
             choice_Fact *= i
@@ -191,11 +190,11 @@ while choice_M <= 6 or choice_M >= 0:
             choice_Coll = int(input("Lets run the Collapse! give me a POSITIVE number. "))
 
         except ValueError:
-            print("DIEEEEEEE!!!")
+            print("DIEEEEEEE!!!","\n")
             continue
 
         if choice_Coll <= 0: 
-            print("Nope...")
+            print("Nope...","\n")
             continue
 
         Coll_list = []
