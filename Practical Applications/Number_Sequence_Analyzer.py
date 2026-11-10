@@ -178,6 +178,9 @@ while choice_M <= 6 or choice_M >= 0:
             print("Im NOT joking don't test me!")
             continue
 
+        if choice_Fact < 0:
+            print("NO NEGATIVES. I SAID NO NEGATIVES!!!")
+
         for i in range (1, choice_Fact):
             choice_Fact *= i
         print(choice_Fact,"\n")
