@@ -1,120 +1,212 @@
-options = ["0. Generate a Fibonacci sequence","1. Check if a number is prime","2. Display all prime numbers in a range","3. Generate a multiplication table","4. Calculate a factorial","5. Run a Collatz sequence","6. Exit the program"]
-
-for i in options:
-    print(i)
-
+options = ["0. Generate a Fibonacci sequence","1. Check if a number is prime","2. Display all prime numbers in a range","3. Generate a multiplication table","4. Calculate a factorial","5. Run a Collatz sequence","6. Exit the program", "\n"]
 choice_M = 0
-choice_Fib = 0
-first_Fib = 0
-second_Fib = 1
 
 while choice_M <= 6 or choice_M >= 0:
-    choice_M = int(input("what would you like to choose? enter 0-6 "))
+    choice_Fib = 0
+    first_Fib = 0
+    second_Fib = 1
+    steps = 0
+    for i in options:
+        print(i)
+
+    try:
+        choice_M = int(input("what would you like to choose ONLY ENTER KEYPAD NUMBERS? enter 0-6 "))
+
+    except ValueError:
+        print("THATS NOT A NUMBER BOZO!!!")
+        continue
+
     if choice_M == 0:
         print("Let's do a Fibonacci!")
-        break
+        
     elif choice_M == 1:
         print("You really need to know if a number is prime or not?! Fine...")
-        break
+        
     elif choice_M == 2:
         print("You really are needy aren't you? Lets see them all!")
-        break
+        
     elif choice_M == 3:
         print("What if I dont want to multiply?!? HUH?!?!")
-        break
+        
     elif choice_M == 4:
         print("What even is a Tacforial?")
-        break
+
+        
     elif choice_M == 5:
         print("I'm pretty sure you just made that up just now")
-        break
+        
     elif choice_M == 6:
-        print("I dont want to talk to anyway!")
+        print("I dont want to talk to YOU anyway!")
         break
     else:
          print("THATS NOT IN THE LIST BOZO!!!")
-    
 
-if choice_M == 0:
-    choice_Fib = int(input("how many loops? "))
-    loops_Fib = choice_Fib
-    choice_Fib = 0
-    
-    while choice_Fib < loops_Fib:
+    if choice_M == 0:
 
-        print(first_Fib)
+        try:
+            choice_Fib = int(input("how many loops? "))
 
-        first_Fib, second_Fib = second_Fib, first_Fib + second_Fib
+        except ValueError:
+            print("You really like to test my patience...")
+            continue
+
+        loops_Fib = choice_Fib
+        choice_Fib = 0
+        Fib_list = []
+
+        if loops_Fib < 0:
+            print("How do you expect me to print that many loops?")
+
+        while choice_Fib < loops_Fib:
+
+            Fib_list.append(first_Fib)
+
+            first_Fib, second_Fib = second_Fib, first_Fib + second_Fib
         
-        choice_Fib += 1
+            choice_Fib += 1
 
-elif choice_M == 1:
-    choice_Prim = int(input("What stupid number can you not check yourself? "))
-    prime = True
+        print(Fib_list,"\n")
 
-    if choice_Prim == 1:
-        prime = False
-        print(prime)
+    elif choice_M == 1:
 
-    elif choice_Prim == 2:
+        try:
+            choice_Prim = int(input("What stupid number can you not check yourself? "))
+
+        except ValueError:
+            print("Choose. a. NUMBER. ")
+            continue
+
         prime = True
-        print(prime)
-    
-    else:
-        for i in range(2,choice_Prim):
 
-            if choice_Prim % i == 0:
-                prime = False
-                break
+        if choice_Prim <= 0: 
+            print("im not doing that.")
+            continue
 
-            else:
-                prime = True
-            
-        print(prime)
-
-if choice_M == 2:
-    choice_PrimRS =  int(input("Geez Choose your first number?!?!"))
-    choice_PrimRE = int(input("better not be that long.. whats the second?"))
-    choice_Range = range(choice_PrimRS,choice_PrimRE + 1)
-    range_list = []
-    prime = True
-    for i in choice_Range:
-        if i == 1:
+        elif choice_Prim == 1:
             prime = False
-    
-        elif i == 2:
+            print(prime)
+
+        elif choice_Prim == 2:
             prime = True
-
-        elif i < 0:
-            prime = False
-        
-        else:
-            for divisor in range(2, i):
+            print(prime)
     
-                if i % divisor == 0:
+        else:
+            for i in range(2,choice_Prim):
+
+                if choice_Prim % i == 0:
                     prime = False
                     break
-    
+
                 else:
                     prime = True
+            
+            print(prime,"\n")
 
-        if prime == True:
-            range_list.append(i)
+    elif choice_M == 2:
+        try:
+            choice_PrimRS =  int(input("Geez Choose your first number?!?! "))
+            choice_PrimRE = int(input("better not be that long.. whats the second? "))
 
-    print(range_list)
+        except ValueError:
+            print("Are you joking with me? WHY DO YOU KEEP ENTERING WOR-")
+            continue
 
-if choice_M == 3:
-    choice_MT = int(input("What do you need to be multiplied idiot?"))
-    choice_MTL = int(input("How long? if it's more than 10 ill get u."))
-    MTL_list = []
-    for i in range(1,choice_MTL + 1):
-        i *= choice_MT
-        MTL_list.append(i)
-    print(MTL_list)
+        choice_Range = range(choice_PrimRS,choice_PrimRE + 1)
+        range_list = []
+        prime = True
 
-if choice_M == 4:
-    choice_Fact = int(input("What number do you need for the Tacforial?"))
-    for i in range (1, choice_Fact):
-        choice_Fact *= i
-    print(choice_Fact)
+        if choice_PrimRE < choice_PrimRS:
+            print("i h8te u...")
+            continue
 
+        elif choice_PrimRE or choice_PrimRS < 0:
+            print("get out with your NEGATIVE energy!")
+            continue
+
+        for i in choice_Range:
+            if i == 1:
+                prime = False
+    
+            elif i == 2:
+                prime = True
+
+            elif i < 0:
+                prime = False
+        
+            else:
+                for divisor in range(2, i):
+    
+                    if i % divisor == 0:
+                        prime = False
+                        break
+    
+                    else:
+                        prime = True
+
+                if prime == True:
+                    range_list.append(i)
+
+            print(range_list,"\n")
+
+    elif choice_M == 3:
+
+        try:
+            choice_MT = int(input("What do you need to be multiplied idiot? "))
+            choice_MTL = int(input("How long? if it's more than 10 ill get u. "))
+
+        except ValueError:
+            print("you know what the next time you enter a word i'm leaving...")
+            continue
+
+        MTL_list = []
+
+        if choice_MTL <= 0:
+            print("are you stupid? you CANT HAVE NEGATIVE AMOUNTS!!")
+            continue
+
+        for i in range(1,choice_MTL + 1):
+            i *= choice_MT
+            MTL_list.append(i)
+
+        print(MTL_list,"\n")
+
+    elif choice_M == 4:
+        try:
+            choice_Fact = int(input("What number do you need for the Tacforial? "))
+
+        except ValueError:
+            print("Im NOT joking don't test me!")
+            continue
+
+        for i in range (1, choice_Fact):
+            choice_Fact *= i
+        print(choice_Fact,"\n")
+
+    elif choice_M == 5:
+
+        try:
+            choice_Coll = int(input("Lets run the Collapse! give me a POSITIVE number. "))
+
+        except ValueError:
+            print("DIEEEEEEE!!!")
+            continue
+
+        if choice_Coll <= 0: 
+            print("Nope...")
+            continue
+
+        Coll_list = []
+        steps = 0
+        while choice_Coll != 1:
+            steps += 1
+            Coll_list.append(choice_Coll)
+
+            if choice_Coll % 2 == 0:
+                choice_Coll //= 2
+            
+            elif choice_Coll % 2 > 0:
+                choice_Coll = (choice_Coll * 3) + 1
+
+        Coll_list.append(1)
+        print(Coll_list,"\n")
+        print(f"it took {steps} steps...","\n")
